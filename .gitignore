@@ -1,0 +1,50 @@
+# -----------------------------------------------------------------------------
+# General .NET and Visual Studio Ignored Files
+# -----------------------------------------------------------------------------
+
+# Build results and temporary folders
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio files and caches
+.vs/                   # Visual Studio Solution User Options
+*.user                 # Per-user settings
+*.suo                  # Solution User Options (Older format)
+*.pdb                  # Program Database files (for debugging)
+*.obj
+*.aps
+*.ncb
+*.bak
+
+# NuGet package folders
+**/packages/           # Old style NuGet packages folder
+project.assets.json    # NuGet dependency lock file
+*.nupkg
+
+# Node/npm files (common in modern web apps)
+node_modules/
+
+# -----------------------------------------------------------------------------
+# Project-Specific Ignored Files
+# -----------------------------------------------------------------------------
+
+# Solution and Project files you usually don't need to commit
+*.sln.idef
+*.vssscc
+*.vspscc
+
+# Local configuration files (Do NOT commit connection strings or secrets)
+# It's usually best to commit the base appsettings.json, but ignore secrets.
+# If you don't use Secret Manager, you might want to ignore the base appsettings.json too.
+appsettings.Development.json
+appsettings.Staging.json
+appsettings.Production.json
+appsettings.secrets.json
+
+# -----------------------------------------------------------------------------
+# Miscellaneous and OS Files
+# -----------------------------------------------------------------------------
+Thumbs.db              # Windows thumbnail cache
+*.log                  # Log files

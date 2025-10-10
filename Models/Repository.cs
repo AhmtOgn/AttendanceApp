@@ -1,6 +1,7 @@
+using System.IO.Pipelines;
 using System.Security.Cryptography.Xml;
 
-namespace Homework1.Models{
+namespace Homework1.Models {
     public static class Repository
     {
         private static List<Student> _students = new();
@@ -156,7 +157,7 @@ namespace Homework1.Models{
                 StudentID = "b261202019",
                 Name = "Elchin",
                 Surname = "Rasulov",
-                Signed = false,
+                Signed = true,
                 SignedAt = null
             });
             _students.Add(new Student()
@@ -168,5 +169,25 @@ namespace Homework1.Models{
                 SignedAt = new DateTime(2025, 10, 5, 14, 30, 00)
             });
         }
-   }
+
+        public static int CountStudents()
+        {
+            return _students.Count;
+        }
+
+        public static int GetAttendantStudentCount()
+        {
+            int attendance = 0;
+            foreach (var Student in _students)
+            {
+                if (Student.Signed)
+                {
+                    attendance++;
+                }
+            }
+            return attendance;
+        }
+    }
+
+   
 }

@@ -1,2 +1,28 @@
+@using Homework1.Models
+<h1>Student Attendance Application</h1>
+
 <h2>@ViewBag.CourseCode @ViewBag.CourseName</h2>
 <h3>Today: @ViewBag.CurrentDate</h3>
+
+@* /Views/Home/Index.cshtml *@
+
+@{
+    // Recommended: Initialize with a default value (0)
+    int attendantCount = 0; 
+    
+    // Recommended: Check for null and explicitly cast for type safety
+    if (ViewBag.AttendantStudentCount != null)
+    {
+        attendantCount = (int)ViewBag.AttendantStudentCount;
+    }
+}
+
+<p>Attendant students is: @attendantCount</p>
+
+<p>Signed students: </p>
+
+
+
+
+
+

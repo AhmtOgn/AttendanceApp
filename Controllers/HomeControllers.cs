@@ -11,12 +11,11 @@ namespace Homework1.Controllers
             ViewBag.CourseName = "Web Programming";
             ViewBag.CurrentDate = DateTime.Now.ToString("dd.MM.yyyy");
 
-            // 1. Call the new method to get the count
-            int attendantCount = Repository.GetAttendantStudentCount();
 
-            // 2. Pass the count to the view using ViewBag
+            Repository.GetAttendantStudents();
+            int attendantCount = Repository.GetAttendantStudentCount();
             ViewBag.AttendantStudentCount = attendantCount;
-            
+
             return View();
         }
     }

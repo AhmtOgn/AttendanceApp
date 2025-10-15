@@ -170,23 +170,27 @@ namespace Homework1.Models {
             });
         }
 
+        public static List<Student> GetStudents()
+        {
+            return _students;
+        }
+
         public static int CountStudents()
         {
             return _students.Count;
         }
 
+        public static List<Student> GetAttendantStudents()
+        {
+            return _students.Where(s => s.Signed).ToList();
+        }
+
         public static int GetAttendantStudentCount()
         {
-            int attendance = 0;
-            foreach (var Student in _students)
-            {
-                if (Student.Signed)
-                {
-                    attendance++;
-                }
-            }
-            return attendance;
+            return GetAttendantStudents().Count();
         }
+
+        
     }
 
    

@@ -1,25 +1,24 @@
+@using Homework1.Controllers
 @using Homework1.Models
+@model IEnumerable<Homework1.Models.Student> 
 <h1>Student Attendance Application</h1>
 
 <h2>@ViewBag.CourseCode @ViewBag.CourseName</h2>
 <h3>Today: @ViewBag.CurrentDate</h3>
 
-@* /Views/Home/Index.cshtml *@
 
-@{
-    // Recommended: Initialize with a default value (0)
-    int attendantCount = 0; 
+
+<p>Number of attendants: @ViewBag.AttendantStudentCount</p>
+
+<h2>Signed students:</h2>
+<ul>
+        
     
-    // Recommended: Check for null and explicitly cast for type safety
-    if (ViewBag.AttendantStudentCount != null)
-    {
-        attendantCount = (int)ViewBag.AttendantStudentCount;
-    }
-}
+</ul>
 
-<p>Attendant students is: @attendantCount</p>
+<a href="Sign/Sign">Click to sign</a>
+<a href="List/List">Click to see all students</a>
 
-<p>Signed students: </p>
 
 
 

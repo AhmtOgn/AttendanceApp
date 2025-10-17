@@ -185,12 +185,6 @@ namespace Homework1.Models {
             return _students.Where(s => s.Signed).ToList();
         }
 
-        public static int GetAttendantStudentCount()
-        {
-            return GetAttendantStudents().Count();
-        }
-
-        
     }
 
    

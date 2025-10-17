@@ -12,11 +12,11 @@ namespace Homework1.Controllers
             ViewBag.CurrentDate = DateTime.Now.ToString("dd.MM.yyyy");
 
 
-            Repository.GetAttendantStudents();
-            int attendantCount = Repository.GetAttendantStudentCount();
+            var attendantStudents = Repository.GetAttendantStudents();
+            int attendantCount = attendantStudents.Count();
             ViewBag.AttendantStudentCount = attendantCount;
 
-            return View();
-        }
+            return View(attendantStudents);
+        }    
     }
 }

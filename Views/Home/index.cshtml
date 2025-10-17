@@ -1,23 +1,60 @@
-@using Homework1.Controllers
 @using Homework1.Models
 @model IEnumerable<Homework1.Models.Student> 
+
 <h1>Student Attendance Application</h1>
 
 <h2>@ViewBag.CourseCode @ViewBag.CourseName</h2>
 <h3>Today: @ViewBag.CurrentDate</h3>
 
-
-
 <p>Number of attendants: @ViewBag.AttendantStudentCount</p>
 
-<h2>Signed students:</h2>
-<ul>
-        
-    
-</ul>
+<style>
+table{
+    border: 5px solid darkblue;
+}
 
-<a href="Sign/Sign">Click to sign</a>
-<a href="List/List">Click to see all students</a>
+tr, td {
+    border: 1px solid darkblue;
+}
+
+</style>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Signed Students:</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student attendantStudent in Model)
+        {
+            <tr>
+                <td>@attendantStudent.Name @attendantStudent.Surname</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--
+<br />
+@Html.ActionLink(
+"Click to sign!", 
+"Sign", 
+"Sign"
+)
+<br />
+@Html.ActionLink(
+"Click to see all students!", 
+"List", 
+"List"
+)
+<br />
+-->
+
+<br />
+<a href="/Sign/Sign">Click to sign!</a>
+<a href="/List/List">Click to see all students!</a>
+
+
 
 
 

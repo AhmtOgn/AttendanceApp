@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Attendance Application</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+        }
+
+        .fGithubInfo {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 25px;
+            padding: 0.5rem;
+        }
+
+        
+        .container {
+            padding: 20px;
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Student Attendance Application</h2>
+    </header>
+
+    <div class="container">
+        @RenderBody() </div>
+
+    <footer>
+        <span>Developed by Ahmet Oğan - B231202030</span>
+        <span>&copy; @DateTime.Now.Year - Student Attendance Application</span>
+        <div class="fGithubInfo">
+            <img src="~/images/githubLogo.png"/>
+            <a href="https://github.com/AhmtOgn">Github</a>
+        </div>
+    </footer>
+    
+</body>
+</html>

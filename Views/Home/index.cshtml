@@ -1,8 +1,6 @@
 @using Homework1.Models
 @model IEnumerable<Homework1.Models.Student> 
 
-<h1>Student Attendance Application</h1>
-
 <h2>@ViewBag.CourseCode @ViewBag.CourseName</h2>
 <h3>Today: @ViewBag.CurrentDate</h3>
 
@@ -16,8 +14,8 @@ table{
 tr, td {
     border: 1px solid darkblue;
 }
-
 </style>
+
 <table class="table">
     <thead>
         <tr>
@@ -52,6 +50,7 @@ tr, td {
 
 <br />
 <a href="/Sign/Sign">Click to sign!</a>
+<br />
 <a href="/List/List">Click to see all students!</a>
 
 

@@ -1,0 +1,18 @@
+@using Homework1.Models
+@using System.Diagnostics.Eventing.Reader
+@model Homework1.Models.Student
+
+@{
+    if(Model.Signed)
+    {
+        <p>Student signed at @Model.SignedAt</p>
+    }
+    else
+    {
+        <p>Student didn`t sign!</p>
+    }
+}
+<p>ID: @Model.StudentID</p>
+<P>NAME: @Model.Name @Model.Surname</P>
+
+

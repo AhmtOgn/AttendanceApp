@@ -32,9 +32,12 @@ tr, td {
                 <td>@student.Surname</td>
                 <td>@student.Signed</td>
                 <td>@student.SignedAt</td>
-                <td></td>
+                <td><a href="/Student/Details?id=@student.StudentID">Details</a></td>
             </tr>
         }
-    
     </tbody>
 </table>
+
+<p>Total students number: @ViewBag.TotalStudentNumber</p>
+
+<a href="/home/index">Go back homepage!</a>

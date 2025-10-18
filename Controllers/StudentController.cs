@@ -7,9 +7,23 @@ namespace Homework1.Controllers
     {
         public IActionResult Student()
         {
-            var students = Repository.GetStudents();  
+            var studentsList = Repository.GetStudents();
+            int totalStudentNumber = studentsList.Count();
+            ViewBag.TotalStudentNumber = totalStudentNumber;
 
-            return View(students);
+            return View(studentsList);
+        }
+
+        public IActionResult Details(string id)
+        {
+            var student = Repository.GetStudent(id);
+
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+            return View(student);
         }
 
 

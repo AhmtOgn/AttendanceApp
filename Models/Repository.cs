@@ -175,10 +175,16 @@ namespace Homework1.Models {
             return _students;
         }
 
-        public static int CountStudents()
+        public static void Sign(Student student)
         {
-            return _students.Count;
+            student.Signed = true;
         }
+
+        public static Student? GetStudent(string studentId)
+        {
+            return _students.FirstOrDefault(s => s.StudentID == studentId); 
+        }
+
 
         public static List<Student> GetAttendantStudents()
         {

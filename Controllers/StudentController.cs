@@ -3,9 +3,9 @@ using Homework1.Models;
 
 namespace Homework1.Controllers
 {
-    public class ListController : Controller
+    public class StudentController : Controller
     {
-        public IActionResult List()
+        public IActionResult Student()
         {
             var students = Repository.GetStudents();  
 

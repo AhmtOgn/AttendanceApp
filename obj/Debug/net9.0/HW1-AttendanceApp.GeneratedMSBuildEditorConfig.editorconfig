@@ -24,16 +24,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/repos/Semester 3/Web Application/HW1-AttendanceApp/Views/List/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlzdFxMaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [d:/repos/Semester 3/Web Application/HW1-AttendanceApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/repos/Semester 3/Web Application/HW1-AttendanceApp/Views/Sign/Sign.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnblxTaWduLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/repos/Semester 3/Web Application/HW1-AttendanceApp/Views/Student/Student.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdHVkZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/repos/Semester 3/Web Application/HW1-AttendanceApp/Views/_ViewStart.cshtml]

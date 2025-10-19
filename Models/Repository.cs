@@ -1,5 +1,6 @@
 using System.IO.Pipelines;
 using System.Security.Cryptography.Xml;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Buffers;
 
 namespace Homework1.Models {
     public static class Repository
@@ -175,16 +176,15 @@ namespace Homework1.Models {
             return _students;
         }
 
-        public static void Sign(Student student)
-        {
-            student.Signed = true;
-        }
-
-        public static Student? GetStudent(string studentId)
+        public static Student? GetStudentById(string studentId)
         {
             return _students.FirstOrDefault(s => s.StudentID == studentId); 
         }
 
+        public static void Sign(Student student)
+        {
+            student.Signed = true;
+        }
 
         public static List<Student> GetAttendantStudents()
         {

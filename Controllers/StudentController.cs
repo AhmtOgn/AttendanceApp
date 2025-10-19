@@ -14,20 +14,18 @@ namespace Homework1.Controllers
             return View(studentsList);
         }
 
-        public IActionResult Details(string id)
+        public IActionResult Details(string studentId)
         {
-            var student = Repository.GetStudent(id);
-
+            var student = Repository.GetStudentById(studentId);
             if (student == null)
             {
                 return NotFound();
             }
-
             return View(student);
-        }
+        }   
 
 
-
+       
 
 
 

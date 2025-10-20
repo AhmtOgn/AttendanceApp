@@ -1,8 +1,31 @@
 @using Homework1.Models
 @model IEnumerable<Homework1.Models.Student> 
 
-<form action="" target="_blank" method="post">
-<label for="studentID">Student ID: </label>
-<input type="text" id="studentID" name="studentID"/><br />
-<input type="submit" value="Sign!"/> 
+@{
+    ViewData["Title"] = "Sign Attendance";
+}
+
+<h2>Sign Attendance Sheet</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div style="color: red; margin-bottom: 15px; border: 1px solid red; padding: 10px;">
+        @ViewBag.Error
+    </div>
+}
+
+<form method="post" action="/Sign/Sign"> 
+    
+    <label for="StudentID">Enter your Student ID:</label><br />
+    
+    @* name="studentID" kısmı, Controller'daki parametre adıyla eşleşmelidir! *@
+    <input type="text" id="StudentID" name="studentId"/><br /><br />
+    
+    <button type="submit" style="padding: 10px 20px; background-color: darkblue; color: white; border: none; cursor: pointer;">
+        Sign Attendance
+    </button>
 </form>
+
+<div style="margin-top: 20px;">
+    <a href="/">Back to Home</a>
+</div>

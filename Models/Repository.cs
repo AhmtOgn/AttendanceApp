@@ -1,5 +1,6 @@
 using System.IO.Pipelines;
 using System.Security.Cryptography.Xml;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc.ViewFeatures.Buffers;
 
 namespace Homework1.Models {
@@ -181,9 +182,18 @@ namespace Homework1.Models {
             return _students.FirstOrDefault(s => s.StudentID == studentId); 
         }
 
-        public static void Sign(Student student)
+        public static bool Sign(string studentId)
         {
+            var student = _students.FirstOrDefault(s => s.StudentID.Equals(studentId, StringComparison.OrdinalIgnoreCase));
+
+            if (student == null || student.Signed)
+            {
+                return false;
+            }
             student.Signed = true;
+            student.SignedAt = DateTime.Now;
+
+            return true;
         }
 
         public static List<Student> GetAttendantStudents()

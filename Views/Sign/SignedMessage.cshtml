@@ -1,0 +1,31 @@
+@using Homework1.Models
+@model IEnumerable<Homework1.Models.Student> 
+@{
+    ViewData["Title"] = "Success";
+}
+
+<div style="text-align: center; padding: 50px; background-color: #f0fff0; border: 2px solid green; border-radius: 8px;">
+    
+    <h1 style="color: green;">✅ Success!</h1>
+    
+    
+    <p style="font-size: 1.2em; margin-top: 20px;">
+        @TempData.["Message"]
+    </p>
+    
+   
+    
+    <p style="font-size: 1.2em; margin-top: 20px;">
+        Total number of attendants: @ViewBag.AttendantCount;
+    </p>
+
+    
+    <hr style="margin: 30px 0;" />
+    
+    <a href="/" style="text-decoration: none; padding: 10px 20px; background-color: darkblue; color: white; border-radius: 5px;">
+        Go to Home Page
+    </a>
+    <a href="/Student/Student" style="text-decoration: none; padding: 10px 20px; background-color: gray; color: white; border-radius: 5px; margin-left: 10px;">
+        View Student List
+    </a>
+</div>

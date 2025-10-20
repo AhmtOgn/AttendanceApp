@@ -8,15 +8,15 @@
     
     <h1 style="color: green;">✅ Success!</h1>
     
-    
+    @if (ViewBag.StudentSignedMessage != null)
+    {
+      <p style="font-size: 1.2em; margin-top: 20px;">
+        @ViewBag.StudentSignedMessage
+    </p>  
+    }
+
     <p style="font-size: 1.2em; margin-top: 20px;">
-        @TempData.["Message"]
-    </p>
-    
-   
-    
-    <p style="font-size: 1.2em; margin-top: 20px;">
-        Total number of attendants: @ViewBag.AttendantCount;
+        Total number of attendants: @ViewBag.AttendantCount
     </p>
 
     

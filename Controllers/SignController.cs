@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Homework1.Models;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Homework1.Controllers
 {
@@ -34,10 +35,12 @@ namespace Homework1.Controllers
 
             bool isSuccess = Repository.Sign(studentId);
 
-
+            
             if (isSuccess)
             {
-                TempData["SuccessMessage"] = $"Student {student.Name} {student.Surname} whose Id is {studentId} succesfully signed.";
+                var studentSignedMessage = $"Student {student.Name} {student.Surname} whose Id is {studentId} succesfully signed!";
+                TempData["studentSignedMessage"] = studentSignedMessage; 
+                
                 return RedirectToAction("SignedMessage");
             }
                 return View();
@@ -48,9 +51,11 @@ namespace Homework1.Controllers
             var attendantStudents = Repository.GetAttendantStudents();
             var attendantCount = attendantStudents.Count();
             ViewBag.AttendantCount = attendantCount;
+
+            var studentSignedMessage = TempData["studentSignedMessage"] as string;
+            ViewBag.StudentSignedMessage = studentSignedMessage;
             
-            var Message = TempData["SuccessdMessage"] as string;    
-            return View(Message);
+            return View();
         }
         
     }

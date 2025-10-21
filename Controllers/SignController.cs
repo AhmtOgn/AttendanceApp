@@ -30,7 +30,7 @@ namespace Homework1.Controllers
             }
             else
             {
-                ViewBag.Error = $"Student '{student.Name}' '{student.Surname}' already signed at '{student.SignedAt}!'";
+                ViewBag.Error = $"Student {student.Name} {student.Surname} already signed at '{student.SignedAt}!'";
             }
 
             bool isSuccess = Repository.Sign(studentId);

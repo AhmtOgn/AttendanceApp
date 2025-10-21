@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HW1-AttendanceApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07018e8ec9377a6a57eb6c8e825b71b0ee46ca25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf898a3317baa66fc0607fe3f7aa581f6a41d05e")]
 [assembly: System.Reflection.AssemblyProductAttribute("HW1-AttendanceApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HW1-AttendanceApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

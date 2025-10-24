@@ -26,12 +26,12 @@ namespace Homework1.Controllers
             if (student == null)
             {
                 ViewBag.Error = $"Student ID '{studentId}' not found!";
-                return View(); // <-- Hata oluştuysa burada dönün
+                return View();
             }
-            else if (student.Signed) // <-- Repository.Sign'da da bu kontrol var ama burada da yapmalıyız.
+            else if (student.Signed) 
             {
                 ViewBag.Error = $"Student {student.Name} {student.Surname} already signed at '{student.SignedAt}!'";
-                return View(); // <-- Hata oluştuysa burada dönün
+                return View(); 
             }
 
             bool isSuccess = Repository.Sign(studentId);

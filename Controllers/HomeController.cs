@@ -5,7 +5,6 @@ namespace Homework1.Controllers
 {
     public class HomeController : Controller
     {
-        //cd /d/repos/'semester 3'/'web application'/HW1-AttendanceApp
         public IActionResult Index()
         {
             ViewBag.CourseCode = "SWE 203";
